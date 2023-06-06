@@ -160,17 +160,11 @@ Webcam,Joystick,Mikrofon
     1. Aygıt Yazılımı (firmware) (Bios)
         - Sistemi oluşturan donanımların çalışması için greekli olan yazılımlardır.
     2. İşletim Sistemi
-        - Kullanıcı arayüzü, ağ bağlantı arayüzleri, Dosya erişimi
-ve organizasyonu, Çoklu çalışma gibi hizmetleri sağlayan yazılımlardır.
-Örneğin: DOS, Windows, Linux, PARDUS, Unixvs..
+        - Kullanıcı arayüzü, ağ bağlantı arayüzleri, Dosya erişimi ve organizasyonu, Çoklu çalışma gibi hizmetlerisağlayan yazılımlardır. Örneğin: DOS, Windows, Linux, PARDUS, Unixvs..
     3. Sistem Destek Yazılımı
-        - Sistemle ilişkili faydalı yazılımlardır.
-Örneğin,Disk formatlayıcı, hesap makinesi, test ve iletişim yazılımları,
-Hyperterminal, Telnet vs..
+        - Sistemle ilişkili faydalı yazılımlardır. Örneğin,Disk formatlayıcı, hesap makinesi, test ve iletişim yazılımları, Hyperterminal, Telnet vs..
     4. Sistem Geliştirme Yazılımı
-        - Bunlar, çeşitli kütüphaneler, Uygulama
-Programı arayüzü(API) (Winsock, setupapi, mmtools, SAPI, DDK..),
-Derleyiciler, Debugger’lar..
+        - Bunlar, çeşitli kütüphaneler, Uygulama Programı arayüzü(API) (Winsock, setupapi, mmtools, SAPI, DDK..),Derleyiciler, Debugger’lar..
 
 2. Uygualama Yazılımı
     1. Genel Amaçlar
@@ -181,7 +175,17 @@ Derleyiciler, Debugger’lar..
         - Matematik tabanlı programlar: MATLAB, MatCAD, Mathematica, ...
     2. Uygulamaya Özel
         - Özel yazılımlar
-
+#### Yazılımda Olması Gereken Temel Özellikler
+1. **Doğruluk :** Yazılımın belirtilmiş ihtiyaçlarını karşılamasıdır.
+2. **Güvenilirlik :** Gerekli işlevi ne hassaslıkla yerine getireceği beklentisidir.
+3. **Verimlilik :** İşlevin gerçekleştirilmesi için kullanılması gereken bilgisayar kaynakları ve kod miktarıdır.
+4. **Güvenlik(Bütünlük):** Yazılım ve bilgilerine, istenmeyen insanlarca ulaşımın ne derece engellenebildiğidir.
+5. **Kullanılabilirlik :** Programın öğrenilmesi, çalıştırılması, girdi hazırlama ve çıktı yorumlama işlemlerinin kolaylık derecesidir.
+6. **Hata bulma kolaylığı :** Hatanın yerini bulma ve düzeltme kolaylığıdır.
+7. **Esneklik :** Yazılımda değişiklik yapma kolaylığıdır.
+8. **Taşınabilirlik :** Programın farklı donanımlarda ve yazılım sistemi ortamlarında kullanılmasıdır.
+9. **Tekrar kullanılabilirlik :** Yazılım tamamının ya da bir bölümünün farklı bir uygulamada kullanılabilmesidir.
+10. **Birlikte çalışabilirlik :** Bir yazılım sisteminin diğerleri ile bağlantı sağlaması kolaylığıdır.
 #### Program ve Yazılımın Tanımı
 - **Program :** belirli bir işi gerçekleştirmek için gerekli komutlar dizisi olarak tanımlanabilir.
 - **Programlama :** Bir programı oluşturabilmek için gerekli
@@ -189,11 +193,20 @@ komutların belirlenmesi ve uygun biçimde kullanılmasıdır.
 - **Programlama Dilleri:** Bir programın oluşturulmasında
 kullanılan komutlar, tanımlar ve kuralların belirtildiği
 programlama araçlarıdır.
-- **Yazılım :** Belirli bir amacı sağlayan, program yada programlar ve ilgili dokümantasyonlardır.
+- **Yazılım :** Belirli bir amacı sağlayan, program yada programlar ve ilgili dokümantasyonlardır.Bir başka deyişle var olan bir problemi çözmek amacıyla bilgisayar dili kullanılarak oluşturulmuş anlamlı anlatımlar bütünüdür.
 
 ### Programlama Dilleri
 Bilgisayarlara ne yapmaları gerektiğini söylememizi sağlayan özel bir dil Tüm yazılımlar programlama dilleri ile yazılır.
+İster genel ister özel amaçlı olsun tüm uygulama ve sistem yazılımları programlama dilleriyle yazılır. Bir programlama dili, insanların bilgisayara çeşitli işlemler yaptırmasına imkân veren her türlü sembol, karakter ve kurallar grubudur. Programlama dilleri insanlarla bilgisayarlar arasında tercümanlık görevi yapar. Programlama dilleri, bilgisayara neyi, ne zaman, nasıl yapacağını belirten deyim ve komutlar içerir.
+
 ![prdil-1](./img/prdil-1.png)
+
+- **Bir programlama dili şunlardan oluşur :**
+    - **Genel komutlar :** Programlama dilinin anlayacağı komutlardır.
+    - **Gelişmiş komutlar :** Genel komutları kullanarak oluşturulmuş komutlardır.
+    - **API komutları :** İşletim sisteminin sunduğu özellikleri kullanan komutlardır.
+    - **Derleyici komutları :** Komut içinde çalışmayıp derleme esnasında alınan bilgilere göre derleme yapılmasını sağlar.
+    - **Aktif nesneler :** ‘Buton, Menü, Gösterge çubuğu ve Tabpanel’ gibi bileşenlerin genel adıdır.
 
 - **Makine Dili (birinci seviye):** Makine dili mikroişlemci ya da mikrodenetleyici gibi komut işleme yeteneğine sahip entegrelerin işleyebilecekleri komutlardan ve buna uygun söz diziminden oluşan dile verilen addır. Makine dili, işlemcinin verilen komutlar doğrultusunda çalıştırılmasını sağlayan ve işlemci mimarisine göre değişen en alt seviyedeki programlama dili dilidir. Bu dil sadece 0 ve 1 ikililerinin anlamlı kombinasyonlarından meydana gelmektedir. Bu nedenle, makine dilinin anlaşılması çok güçtür.
 
@@ -210,7 +223,7 @@ Bilgisayarlara ne yapmaları gerektiğini söylememizi sağlayan özel bir dil T
     - Makine dili işlemci türüne özel olarak yazılmaktadır Dolayısıyla, bir işlemci türü için makine diliyle yazılmış program, diğer işlemciler için uygun olmamaktadır.
     - Bilgisayarın ana dilidir.
     - Bilgisayarın anlayabildiği tek dildir.
-- Assembly Dili (ikinci seviye):
+    - Assembly Dili (ikinci seviye):
     - Makine diline birebir çevrilebilir
     - Makine dilinden daha rahat okunabilir.
         örn: ADD X Y Z
@@ -228,6 +241,10 @@ Bilgisayarlara ne yapmaları gerektiğini söylememizi sağlayan özel bir dil T
 - Natural Language Programing
     - İnsan Dilini programlama diline çevirir
     - Oldukça karmaşık olarak nitelendirilir.
+- Alt seviye diller
+    - sembolik makine dili(Assembler)
+- En Alt seviye dil
+    - En alt seviye dil makine dilidir tamamen 0 ve 1 lerden oluşur
 
 ![dildendilecevrim](./img/dil-cevrim.png)
 
@@ -250,9 +267,14 @@ yapabiliyorlardı.
     - COBOL, the COmmon Business Oriented Language
     - ALGOL Algorithmic Language
 
+![genel-dil-kronoloji](./img/genel-dil-kronoloji.png)
+
 ![diller-1](./img/diller-1.png)
 
 ![diller-2](./img/diller-2.png)
+
+**Dillerin Soy Ağacı**<br>
+![dil-soylari](./img/dil-soylari.png)
 
 ### Yazılım Geliştirme Araçları
 1. **Editörler-Tümleşik geliştirme ortamları(IDE):**
@@ -267,7 +289,15 @@ yapabiliyorlardı.
         - Derleyici ve bağlayıcı parametreleri menülerden ayarlanabilir.
         - Yardımlar mevcuttur.
         - Her yazılım dilinin kendi IDE si mevcuttur. Ancak bazı IDE’ler birden fazla yazılım dili için ortam sağlayabilir.
-2. **Derleyicilerle birlikte kullanılır :** Bir derleyici, bir metin editörü yada IDE üzerinde yazılan program kodlarını, makinenin anlayabileceği OBJ kodlara dönüştüren bir uygulama yazılımıdır. Derleyicilerin birçoğu, Program dilinin yanısıra makine dilinin(assembly) de kullanılmasına izin verir.
+2. **Derleyicilerle birlikte kullanılır :** Bir Programalama dilinde yazılmış olan kaynak kodunu başka bir dile(genellikle makine koduna) çeviren yazılımlara derleyici denir. Bir derleyici, bir metin editörü yada IDE üzerinde yazılan program kodlarını, makinenin anlayabileceği OBJ kodlara dönüştüren bir uygulama yazılımıdır. Derleyicilerin birçoğu, Program dilinin yanısıra makine dilinin(assembly) de kullanılmasına izin verir.<br>
+    - örnek :<code>x=2+y</code> kodunu bir programalam dili ile yazılmış okunabilir kod olarak düşünelim.
+    ```assembly
+    LOAD A [0]      ;; belleğin 0 adresindeki veriyi A siciline yükle
+    ADD A BX        ;; A siciline BX sicilindeki adreste bulunan veriyi ekle
+    STOR A [100]    ;; sonucu 100 adresine yaz
+    ```
+    Bu örnekte çevirinin hedefi, programcının anladığı kaynak kodundan işlemcinin anladığı 0 ile 1’den oluşan makine dili kodunu üretmektir (LOAD, ADD ve STOR komutları 0001, 0011 ve 0010 olarak yorumlanır.)<br>
+    ![derleyici-assembly](./img/derleyici-assembly.png)
 3. **Derleyiciler-Bağlayıcılar (Compilers–Linkers):** Bir bağlayıcı, derleyici tarafından derlenmiş olan OBJ program kodlarını uygun bellek bölgelerine yerleştirerek, değişkenlerin ve sabitlerin bellek atamalarını ve ilklemelerini gerçekleyerek tek bir çalıştırılabilir program elde eden bir uygulama yazılımıdır (windows için exe dosya).
     ![editor-derleyici-baglayici](./img/editor-derleyici-baglayici.png)
 4. **Yorumlayıcılar (Interpreter) :** Yorumlayıcılar, program kodunu bir bütün olarak değerlendirmez. Program kodunu satır, satır yorumlayarak çalıştırırlar. Bu nedenle günümüzde derleyicilere göre daha kısıtlı uygulamalara sahiptirler, internet uygulamaları ve bilimsel alanda yaygın  kullanılmaktadırlar.<br>
@@ -290,6 +320,36 @@ Onluk düzende rakamlar 0..9, ikilik düzende rakamlar 0 , 1 den oluşur.
 Sayıların oluşturulması<br><code>123456 = 1x10<sup>5</sup> + 2x10<sup>4</sup> + 3x10<sup>3</sup> + 4x10<sup>2</sup> + 5x10<sup>1</sup> + 6x10<sup>0</sup></code><br>
 <code>100101 = 1x2<sup>5</sup> + 0x2<sup>4</sup> + 0x2<sup>3</sup> + 1x2<sup>2</sup> + 0x2<sup>1</sup> + 1x2<sup>0</sup>
 </code>
+
+Bilgisayar ortamında dört çeşit sayı sistemi bulunmaktadır.
+1. İkilik sayı sistemi(Binary)
+    - İkili sayı sistemi 2 tabanını kullanır. 0 ve 1 olmak üzere iki rakamı vardır. Bu sayılar bilgisayarda akımın geçmesi veya geçmemesi esasına göre belirlenir.<br>
+    örnek : <code>(001010)<sub>2</sub>, (111011)<sub>2</sub>, (10)<sub>2</sub></code>
+    - İkilik sistemden 10'luk sisteme dönüştürmek:<br>
+    örnek : <code>(101101)<sub>2</sub>=1x2<sup>5</sup> + 0x2<sup>4</sup> + 1x2<sup>3</sup> + 1x2<sup>2</sup> + 0x2<sup>1</sup> + 1x2<sup>0</sup></code><br>
+    <code>32 + 0 + 8 + 4 + 0 + 1=(45)<sub>10</sub></code>
+    - 10'luk sistemden ikilik sisteme dönüştürme<br>
+    Bu işlemi yapabilmek için 10'lu sistemde verilen sayı sürekli olarak ikiye bölünmektedir.Bölmelerin kalanları bize  osayının ikili sistemdeki karşılığını vermektedir.<br>örnek : 10'lu tabandaki 53 sayısını ikili tabandaki karşılığı;<br>
+    ![ikilidenonluya](./img/ikilidenonluya.png)
+    - ikili sistemden 8'li sisteme dönüştürme<br>
+    ![ikilidensekizliye](./img/ikilidensekizliye.png)
+    - Sekizliden 2'li sisteme dönüştürme<br>
+    ![sekizlidenikiliye](./img/sekizlidenikiliye.png)
+    - İkili sistemden 16'lı sisteme dönüştürme<br>
+    ![ikilidenonaltiliya](./img/ikilidenonaltiliya.png)
+    - Onaltılı sistemden 2'li sisteme dönüştürme<br>
+    ![onaltilidanikiliye](./img/onaltilidanikiliye.png)
+2. Sekizlik sayı sistemi(Oktal)
+    - Bu sayı sisteminde sadece 0,1,2,3,4,5,6,7 rakamları kullanılır.Bu sayı sisteminin tabanı 8 dir.<br>
+    örnek : <code>(25)<sub>8</sub>, (376)<sub>8</sub>, (27510)<sub>8<sub>,</code>
+3. Onluk sayı sistemi(Decimal)
+    - Bu sayı sistemi günlük hayatta kullandığımız sayılardan oluşur.Yani 0,1,2,3,4,5,6,7,8,9 rakamalarını kapsar, bu sayı sisteminin tabanı 10 dur.<br>
+    örnek : <code>(10)<sub>10</sub>, (9999)<sub>10</sub>, (1820918)<sub>10</sub></code>
+4. Onaltılık sayı sistemi(Heksadesimal)
+    - Bu sayı sisteminde 16 tane rakam bulunmaktadır.1,2,3,4,5,6,7,8,9,A,B,C,D,E,F rakamları ve harflerinden oluşur.Sayı sisteminin tabanı 16 dır.16'lık sayı sisteminde her bir harf bir rakamı  temsil eder.
+    - Bunlar <code>A=10,B=11,C=12,D=13,E=14,F=15</code>
+        - Bilgisayar sisteminde 1 ve 0'ın yan yana yazılmasıyla 10 sayısı aynı şekilde ifade edildiğinden karmaşıklık olmasından dolayı bu şekilde bir çözüm üretilmiştir.<br>
+    örnek : <code>(1029)<sub>16</sub>, (AFDC)<sub>16</sub>, (290A3DC)<sub>16</sub></code>
 
 Sekiz bitlik ikili sayılara bir byte lık sayılar denir<br>
 <code>10011101 --> 8 bit yada bir byte</code>
@@ -328,8 +388,8 @@ Bir çok kodlama türü olmasına karşın dünyada bilgisayar ortamlarında **A
 
 ASCII temel olarak 7 bit’ tir. 127 karakterden oluşur. Ama Extended kısmıyla birlikte 8 bit kullanılmaktadır. Ancak genişletilmiş kısımdaki semboller yazılım ortamına göre değişebilmektedir.
 
-**ASCII ilk 128 sembol**
+**ASCII ilk 128 sembol**<br>
 ![ascii](./img/ascii.png)
 
-**ASCII genişletilmiş kısım**
+**ASCII genişletilmiş kısım**<br>
 ![ascii-ext](./img/ascii-ext.png)
