@@ -130,7 +130,7 @@ Donanım fiziksel aygıtlardır.Yazılım ise yapılması gereken işleri yapabi
 ![bilgisayar-sistemi](./img/bilgisayar-sistemi.png)
 
 #### Donanım
-![donanım-1](./img/donan%C4%B1m-1.png)
+![donanim-1](./img/donanim-1.png)
 Görevleri yapabilmek için komutları işleyen mikroişlemciye CPU denir.
 
 **CPU :** Kontrol Ünitesi,Aritmetik Mantık Ünitesi(Arithmetic Logic Unit),Register
@@ -393,3 +393,223 @@ ASCII temel olarak 7 bit’ tir. 127 karakterden oluşur. Ama Extended kısmıyl
 
 **ASCII genişletilmiş kısım**<br>
 ![ascii-ext](./img/ascii-ext.png)
+
+<hr>
+
+# 2.Algoritma
+## Problem Çözme ve Algoritma
+Problem Çözme Tekniği (Descartes’e göre):
+1. Doğruluğu kesin olarak kanıtlanmadıkça, hiçbir şeyi doğru olarak kabuletmeyin; tahmin ve önyargılardan kaçının.
+2. Karşılaştığınız her güçlüğü mümkün olduğu kadar çok parçaya bölün.
+3. Düzenli bir biçimde düşünün; anlaşılması en kolay olan şeylerle başlayıp yavaş yavaş daha zor ve karmaşık olanlara doğru ilerleyin.
+4. Olaya bakışınız çok genel, hazırladığınız ayrıntılı liste ise hiçbir şeyi dışarıda bırakmayacak kadar kusursuz ve eksiksiz olsun.
+
+**Problem çözme sırası**
+1. Problemi anlama (Understanding, Analyzing),
+2. Bir çözüm yolu geliştirme (Designing),
+3. Algoritma ve program yazma (Writing),
+4. Tekrar tekrar test etme (Reviewing)
+
+**Problem Çözme**
+Bir problemi çözmek için yazılacak programda, genel olarak, aşağıdaki yazılım geliştirme aşamaları uygulanmalıdır.
+
+**Yazılım Geliştirme Aşamaları**<br>
+1. **Problemin Analizi:** Problemin tam olarak ne olduğunun anlaşılmasıdır. Bu nedenle, problemin çözümünden neler beklendiği ve yaratacağı çözümün girdi ve çıktılarının neler olacağı kesin olarak belirlenmelidir.
+1. **Tasarım:** Problemi çözmek için kullanılacak çözüm adımlarını gösteren bir liste yapılması gereklidir. Bir problemin çözüm adımlarını gösteren bu listeye algoritma denir. Böyle bir liste tasarlanırken, ilk önce problemin ana adımları çıkarılır; daha sonra her adım için, gerekiyorsa, daha ayrıntılı bir çözüm tasarlanır.
+3. **Kodlama:** Kağıt üzerinde geliştirilen algoritma, programcının tercih ettiği bir programlama diline çevrilir.
+4. **Test etme:** Program değişik girdiler ile çalıştırılarak ürettiği sonuçlar kontrol edilerek test işlemi gerçekleştirilir. Sonuçlar beklendiği gibi ise , programın doğru çalıştığı kanıtlanmış olunur; değilse doğru çalışmayan kısımları tespit edilerek düzeltilir.
+5. **Belgeleme:** Bütün bu çalışmaların belli bir dosyalama sistemi içinde belgeler halinde saklanmasının sağlandığı aşamadır.
+6. **Bakım:** Programın güncel koşullara göre yeniden düzenlenmesini içeren bir konudur. Oluşan hataların giderilmesi,, yeni eklemeler yapılması ya da programın teknolojisinin yenilenmesi gibi işlemlerdir.
+
+![klasik-yasam-surec-modeli](./img/klasik-yasam-surec-modeli.png)
+
+Bir problem çözülürken biri algoritmik, diğeri herustic(sezgisel) olarak adlandırılan iki yaklaşım vardır. Algoritmik yaklaşımda, çözüm için olası yöntemlerden en uygun olanı seçilir ve yapılması gerekenler adım adım ortaya konulur. Herustic yaklaşımda ise, çözüm açıkça ortada değildir. Tasarımcının deneyimi, birikimi ve o andaki düşüncesine göre problemi çözecek bir şeylerin şekillendirilmesiyle yapılır. Program tasarımcısı, algoritmik yaklaşımla çözemediği, ancak çözmek zorunda olduğu problemler için bu yaklaşımı kullanır.
+
+## Algoritmik Yaklaşım
+Algoritmalar iki farklı şekilde kağıt üzerinde ifade edilebilirler;
+1. Pseudo Code (Kaba Kod veya Yalancı Kod veya Sözde Kod), bir algoritmanın yarı programlama dili kuralı, yarı konuşma diline dönük olarak ortaya koyulması/tanımlanmasıdır. Bu şekilde  österim algoritmayı genel hatlarıyla yansıtır.
+2. Akış şeması, algoritmanın görsel/şekilsel olarak ortaya koyulmasıdır. Problemin çözümü için yapılması gerekenleri, başından sonuna kadar, geometrik şekillerden oluşan simgelerle gösterir.
+
+## Pseudo Kod
+Sözde programlar, doğrudan konuşma dilinde ve programlama mantığı altında, eğer, iken gibi koşul kelimeleri ve > = < gibi ifadeler ile beraber yazılır. İyi bir biçimde yazılmış, sözde koddan, programlama diline kolaylıkla geçilebilir.
+
+**Örnek:** Verilen bir sıcaklık derecesine göre suyun durumunu
+belirten bir sözde program yazınız.
+
+```
+Örnek Giriş/Çıkış
+–Bu Program, Sıcaklığa göre suyun durumunu gösterir 
+–Su, Buz, Buhar
+–----------------------------------------------------------
+–Lütfen derece cinsinden sıcaklığı giriniz: 140
+–BUHAR elde edeceksiniz.
+```
+
+İstenilen programın Pseudo Kodu:
+1. Program açıklama mesajı yaz.
+2. Kullanıcın sıcaklığı girmesi için bir uyarı mesajı yaz.
+3. Girilen Sıcaklığı Oku.
+5. Eğer Sıcaklık < 0 ise Durum=“Buz”
+6. Eğer Sıcaklık>= 100 ise Durum=“Buhar”
+7. Değilse Durum =“Su”
+8. Sonucu Yaz.
+
+## Akış Diyagramları
+Algoritmanın, görsel olarak simge ya da sembollerle ifade edilmiş şekline “akış şemaları” veya FLOWCHART adı verilir. Akış şemalarının algoritmadan farkı, adımların simgeler şeklinde kutular içine yazılmış olması ve adımlar arasındaki ilişkilerin ve yönünün oklar ile gösterilmesidir.
+
+Programın saklanacak esas belgeleri olan akış şemalarının hazırlanmasına, sorun çözümlenmesi sürecinin daha kolay anlaşılır biçime getirilmesi, iş akışının kontrol edilmesi ve programın kodlanmasının kolaylaştırılması gibi nedenlerle başvurulur. Uygulamada çoğunlukla, yazılacak programlar için önce programın ana adımlarını (bölümlerini) gösteren genel bir bakış akış şeması hazırlanır. Daha sonra her adım için ayrıntılı akış şemalarının çizimi vardır.
+
+En basit şekliyle dikdörtgen kutulardan ve oklardan oluşur. Akış şeması sembolleri ANSI (American National Standards Institute) standardı olarak belirlenmiş ve tüm dünyada kullanılmaktadır.
+
+Her simge, yapılacak bir işi veya komutu gösterir. Akış  emalarının hazırlanmasında aşağıda yer alan simgeler kullanılır.
+
+![akis-semalari-1](./img/akis-semalari-1.png)
+![akis-semalari-2](./img/akis-semalari-2.png)
+![akis-semalari-3](./img/akis-semalari-3.png)
+![akis-semalari-4](./img/akis-semalari-4.png)
+![akis-semalari-5](./img/akis-semalari-5.png)
+
+- İşlemleri belirten sembollere bilgisayar dilinde "operator" denir.
+- Algoritmada kullanılan operatörler tabloda verilmiştir.
+
+![algoritma-operatorleri](./img/algoritma-operatorleri.png)
+
+## Algoritmalarda Kullanılan Terimler
+1. Tanımlayıcı
+2. Değişken
+3. Sabit
+4. Aktarma
+5. Sayaç
+6. Döngü
+7. Ardışık Toplama
+8. Ardışık Çarpma
+
+### Tanımlayıcı
+* Programcı tarafından oluşturulur.
+* Programdaki değişkenleri,sabitleri, kayıt alanlarını, özel bilgi tiplerini vb adlandırmak için kullanılan kelimeler
+* Tanımlayıcılar, yerini tuttukları ifadelere çağrışım yapacak şekilde seçilmelidir.
+* İngiliz alfabesindeki A-Z veya a-z arası 26 harften
+* 0-9 arası rakamlar kullanılabilir
+* Sembollerden sadece alt çizgi (_) kullanılabilir.
+* Tanımlayıcı isimleri harfle veya alt çizgiyle başlayabilir.
+* Tanımlayıcı ismi,rakamla başlayamaz veya sadece rakamlardan oluşamaz.
+
+### Değişken
+* Programın her çalıştırılmasında, farklı değerler alan bilgi/bellek alanlarıdır.
+* Değişken isimlendirilmeleri, yukarıda sayılan tanımlayıcı kurallarına uygun biçimde yapılmalıdır.
+
+**Örneğin ;**<br>
+Bir ismin aktarıldığı değişken ; **ad**<br>
+Bir isim ve soy ismin aktarıldığı değişken; **adsoyad**<br>
+Ev telefon no sunun aktarıldığı değişken; **evtel**<br>
+Ev adresinin aktarıldığı değişken; **evadres**<br>
+İş adresinin aktarıldığı değişken; **isadres**<br>
+
+### Sabit
+Programdaki değeri değişmeyen ifadelere “sabit” denir “İsimlendirme kuralları”na uygun olarak oluşturulan sabitlere, sayısal veriler doğrudan; alfa sayısal veriler ise tek/çift tırnak içinde aktarılır.
+
+**Örnek Algoritma**<br>
+Başla<br>
+Bir isim giriniz(A)<br>
+“İlk algoritmama Hoş geldin” mesajı (B)<br>
+B VE A yı Yaz<br>
+Dur<br>
+( Yukarıdaki algoritma, dışarıdan girilen bir A değişkeni ile B sabitini birleştirip ekrana yazar.)
+
+![sabit-algoritma-ornek](./img/sabit-algoritma-ornek.png)
+
+### Aktarma
+* Herhangi bir bilgi alanına, veri yazma; herhangi bir ifadenin sonucunu başka bir değişkende gösterme vb görevlerde “aktarma” operatörü kullanılır. <br><code>değişken=ifade</code> <br>
+* Değişken yazan kısım herhangi bir değişken ismidir.
+* İfade yazan kısımda ise matematiksel,mantıksal veya alfa sayısal ifade olabilir.
+* = sembolü, aktarma operatörüdür ve sağdaki ifadenin/işlemin sonucunu
+soldaki değişkene aktarır. Bu durumda değişkenin eğer varsa bir önceki
+değeri silinir.
+![aktarma-ornek](./img/aktarma-ornek.png)
+
+### Sayaç
+- Programlarda bazı işlemlerin belirli sayıda yaptırılması veya işlenen/üretilen değerlerin sayılması gerekebilir.
+<br><code>sayac=sayac+1</code> <br>
+- Bu işlemde sağdaki ifadede değişkenin eski değerine 1 eklenmekte; bulunan
+sonuç yine kendisine yeni değer olarak aktarılmaktadır.
+- Bu tür sayma işlemlerine algoritmada sayaç adı verilir.
+- sayacın genel formülü;<br>
+<br><code>sayaç değişkeni=sayaç değişkeni + adım</code> <br>
+
+![sayac-ornek](./img/sayac-ornek.png)
+
+### Döngü
+- Bir çok programda bazı işlemler, belirli ardışık değerlerle  gerçekleştirilmekte veya belirli sayıda yaptırılmaktadır. Programlardaki belirli işlem bloklarını, verilen sayıda gerçekleştiren işlem akış çevrimlerine “döngü” denir.
+- Örneğin 1 ile 1000 arasındaki tek sayıların toplamını hesaplayan programda T=1+3+5 .... yerine 1 ile 1000 arasında ikişer artan bir döngü açılır ve döngü değişkeni ardışık toplanır.
+![dongu-ornek](./img/dongu-ornek.png)
+
+### Ardışık Toplama
+- Programlarda, aynı değerin üzerine yeni değerler eklemek için kullanılır.<br>
+<code>Toplam değişkeni=Toplam değişkeni+Sayı</code><br>
+örnek: klavyeden girilen 5 sayının ortalamasının bulunmasını sağlayan algoritma<br>
+```
+1. Başla
+2. T=0
+3. S=0
+4. Eğer S>4 ise git 9
+5. S=S+1
+6. Sayıyı (A) gir
+7. T=T+A
+8. Git 4
+9. Ortalama=T/5
+10. Yaz Ortalama
+11. Dur
+```
+
+### Ardışık Çarpma
+- Ardışık veya ardışıl çarpma işleminde; aynı değer, yeni değerlerle
+çarpılarak eskisinin üzerine aktarılmaktadır.<br>
+<code>Çarpım değişkeni=Çarpım değişkeni*Sayı</code><br>
+Örnek: Klavyeden girilen N sayısının faktöriyelini hesaplayan programın
+algoritmasını yazınız.<br>
+```
+1. Başla
+2. N sayısını gir
+3. Fak=1
+4. S=0
+5. Eğer S>N-1 ise git 9
+6. S=S+1
+7. Fak=Fak*S
+8. Git 5
+9. Yaz Fak
+10. Dur
+```
+
+## Akış Diyagramların Kullanılan Temel Şekiller
+
+![diyagram-temel-sekil](./img/diyagram-temel-sekil-1.png)<br>
+![diyagram-temel-sekil](./img/diyagram-temel-sekil-2.png)<br>
+![diyagram-temel-sekil](./img/diyagram-temel-sekil-3.png)<br>
+![diyagram-temel-sekil](./img/diyagram-temel-sekil-4.png)<br>
+
+### Döngü Yapısı
+-Bu yapı kullanılırken, döngü sayacı, koşul bilgisi ve sayacın artım bilgisi verilmelidir. Döngü sayacı kullanılmıyorsa sadece döngüye devam edebilmek için gerekli olan koşul bilgisi verilmelidir.
+
+- Genel olarak çoğu programlama dilinin döngü deyimleri ;
+    - While
+    - Do-while
+    - For
+
+gibi yapılar üzerine kurulmuştur. Farklı dillerde bu yapılara farklı alternatifler olsa da döngülerin çalışma mantığı genel olarak benzerdir.
+
+#### 1. While
+Koşul daha çevrim içerisine girmeden sınanır. Koşul olumsuz olduğunda çerime hiç girilmez ve döngü içerisinde yapılması gerekenler atlanır.
+![while](./img/while.png)<br>
+
+#### 2. Do-While
+Bu döngü deyiminde, çevrim en az bir defa olmak üzere gerçekleşir. Çünkü koşulsınaması döngü sonunda yapılmaktadır. Eğer koşul sonucu olumsuz ise bir sonraki çevrime geçilmeden döngüden çıkılır. Çevrimin devam edebilmesi için her döngü sonunda yapılan koşul testinin olumlu sonuçlanması gerekir.
+![do-while](./img/do-while.png)<br>
+
+#### 3. For
+Diğer deyimlerden farklı olarak, döngü sayacı doğrudan koşul parametreleri düzeyinde verilir. Döngü girmeden önce sayaç değişkenine başlangıç değeri atanmakta ve daha sonra koşula bakılmaktadır. Döngü içerisinde belirtilen işlemler yapıldıktan sonra sayaç değişkeni arttırılmaktadır.
+![for](./img/for.png)
+
+#### İç içe Döngülerin Kullaılması
+İçiçe döngü kurulurken en önemli unsur, içteki döngü sonlanmadan bir dıştaki döngüye geçilmemesidir. Diğer bir deyişle döngüler birbirlerini kesmemelidir.
+![icice](./img/icice-dongu.png)<br>
+![icice](./img/icice-dongu-ornek-1.png)
