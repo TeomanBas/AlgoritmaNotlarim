@@ -582,13 +582,17 @@ algoritmasını yazınız.<br>
 
 ## Akış Diyagramların Kullanılan Temel Şekiller
 
+![akis-diyagrami-temel-sekiller](./img/akis-diyagrami-temel-sekiller.png)<br>
 ![diyagram-temel-sekil](./img/diyagram-temel-sekil-1.png)<br>
 ![diyagram-temel-sekil](./img/diyagram-temel-sekil-2.png)<br>
 ![diyagram-temel-sekil](./img/diyagram-temel-sekil-3.png)<br>
 ![diyagram-temel-sekil](./img/diyagram-temel-sekil-4.png)<br>
+![ornek-diyagramlar](./img/ornek-diyagramlar.png)
+![ornek-diyagramlar-1](./img/ornek-diyagramlar-1.png)
+
 
 ### Döngü Yapısı
--Bu yapı kullanılırken, döngü sayacı, koşul bilgisi ve sayacın artım bilgisi verilmelidir. Döngü sayacı kullanılmıyorsa sadece döngüye devam edebilmek için gerekli olan koşul bilgisi verilmelidir.
+- Bu yapı kullanılırken, döngü sayacı, koşul bilgisi ve sayacın artım bilgisi verilmelidir. Döngü sayacı kullanılmıyorsa sadece döngüye devam edebilmek için gerekli olan koşul bilgisi verilmelidir.
 
 - Genel olarak çoğu programlama dilinin döngü deyimleri ;
     - While
@@ -613,3 +617,14 @@ Diğer deyimlerden farklı olarak, döngü sayacı doğrudan koşul parametreler
 İçiçe döngü kurulurken en önemli unsur, içteki döngü sonlanmadan bir dıştaki döngüye geçilmemesidir. Diğer bir deyişle döngüler birbirlerini kesmemelidir.
 ![icice](./img/icice-dongu.png)<br>
 ![icice](./img/icice-dongu-ornek-1.png)
+
+## Programlama Yazılımı
+Bilgisayar programlama konusunda şu ya da bu programlama dili daha iyidir demek yanlıştır. Önemli olan yazılımın içeriğidir. Seçilecek programlama dili ile  yazılımın en efektif şekilde üretilmesi amaçlanır. Programlama yazılımlarının görevi yazmış olduğumuz kodları belirle kurallar çerçevesinde bilgisayarın anlayacağı dile çevirmektir. Her programlama yazılımı bütün dilleri derleyemeyeceğinden yazacağımız kodlara uygun bir yazılım seçmemiz gerekmektedir. Günümüzde kullanılan çok çeşitli programlama yazılımları mevcuttur.
+
+**IDE:** Tümleşik geliştirme ortamı (Integrated development environment), bilgisayar programcılarının hızlı ve rahat bir şekilde yazılım geliştirebilmesini amaçlayan, geliştirme sürecini organize edebilen birçok araç ile birlikte geliştirme sürecinin verimli kullanılmasına katkıda bulunan araçların tamamını içinde barındıran bir yazılım türüdür.
+
+- Tümleşik geliştirme ortamlarında olması gerekli en temel özellikler:
+    - Programlama diline göre sözdizimi renklendirmesi yapabilen kod yazım editörü
+    - Kod dosyalarının hiyerarşik olarak görülebilmesi amacıyla hazırlanmış gerçek zamanlı bir dizelge
+    - Tümleşik bir derleyici, yorumlayıcı ve hata ayıklayıcı
+    - Yazılımın derlenmesi, bağlanması, çalışmaya tümüyle hazır hâle gelmesi ve daha birçok ek işi otomatik olarak yapabilmek amacıyla küçük inşa araçları
