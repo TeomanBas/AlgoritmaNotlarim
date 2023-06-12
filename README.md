@@ -447,11 +447,79 @@ Algoritmalarda, doğru çözüme ulaşabilmek için, uyulması gereken temel öz
 
     Bir Algoritmada, giriş bilgisi denildiğinde, kesinlikle giriş bilgisi olacaktır diye bir istem yoktur. Bunun anlamı; giriş bilgisi kullanıcı tarafından girilebilir veya algoritma içinde yaratılabilir yada giriş bilgisi hiç olmayabilir. Ancak, algoritmada çıkış bilgisi denildiğinde, kesinlikle olmalıdır. Bilginin girişi; klavye,bar kod okuyucu, mouse gibi giriş ünitesi diye kabul edilen düzenekler aracılığı ile sağlanmaktadır. Bilginin çıkışı ise; ekran veya yazıcılar aracılığı ile sağlanmaktadır.
 
-    Giriş ve Çıkış işlemleri için örneklersek; algoritmada bir bilginin giriş işlemi için okunabilmesi; READ ifadesi kullanılarak, değişken diye isimlendirdiğimiz, veri isimleri aracılığı ile gerçekleşmektedir. Bu durum VERİLER konu başlığı altında,verileri tanımlama konusu içinde ayrıntılı bir şekilde anlatılacaktır.
+    Giriş ve Çıkış işlemleri için örneklersek; algoritmada bir bilginin giriş işlemi için okunabilmesi; READ ifadesi kullanılarak, değişken diye isimlendirdiğimiz, veri isimleri aracılığı ile gerçekleşmektedir.
 
-    
+**Aritmetik öncelikli işlem sırası**<br>
+|   | Anlamı       | Sembol |
+|---|--------------|--------|
+|1. |Üs alma işlemi| ^      |
+|2. |Çarpma işlemi | *      |
+|3. |Bölme işlemi  | /      |
+|4. |Toplama işlemi| +      |
+|5. |Çıkarma işlemi| -      |
 
-    
+Not: Aritmetik operatörlerinin tamamının bulunduğu bir formül içinde, ayrıca parantez ile ifade edilen aritmetik işlemler de bulunuyorsa, parantez içindeki işlemler öncelik sırası olarak yukarıda verilen sıra aynı şekilde uygulanır ve daha sonra parantez dışındaki işlemler yukarıda verilen sıraya göre gerçekleştirilir.
+
+**İlişkisel işlemler**<br>
+İki farklı ifadenin karşılaştırılarak, bir karar işlevini yürütebilmek için kullanılan işlemcilerdir (Operatör). Bir başka deyişle, iki farklı ifadenin karşılaştırılması sonucunda yapılacak işlemin, seçilebilme işlevinin yürütülmesini sağlayan operatörlerdir. İlişkisel işlemcilerin aşağıda sembol ve anlamları verildiği gibidir.
+| | Anlamı  | Sembol                |
+|---|-------|-----------------------|
+|1. | >     | büyüktür              |
+|2. | <     | küçüktür              |
+|3. | =     | eşittir               |
+|4. | >=    | büyük veya eşittir    |
+|5. | <=    | küçük veya eşittir    |
+|6. | ^=    | eşit değildir         |
+
+
+**Mantıksal işlemler**<br>
+Mantıksal işlemler; AND,OR,NOT gibi işlemcilerle belirlenen koşul veya oşullara bağlı olarak ifadeler test edilirler. Test işlemleri, koşulların doğru yada yanlış oluşlarına göre bir sonuç vermektedir. AND (VE) işlemcisi: İki farklı ifade (veri veya bilgi), ayrı koşullarda karşılaştırılarak, koşulların doğruluğu araştırılır. Karşılaştırma sonucunda, her iki ifade için, her iki koşulun doğruluğuna bağlı olarak bir işlem yürütülür.OR (VEYA) işlemcisi : İki farklı ifade (veri veya bilgi), ayrı koşullarda karşılaştırılarak, koşulların doğruluğu araştırılır.Karşılaştırma sonucunda, her iki ifade için, her iki koşuldan birinin gerçekleşme durumuna bağlı olarak bir işlem yürütülür.NOT(DEĞİL)işlemcisi:Verilen ifadenin ters koşuluna göre test işlemi yürütülür
+
+## 2.1 VERİ
+Üzerinde işlem yapabildiğimiz her türlü ifade, veri diye isimlendirilir. 
+
+**VERİ ÇEŞİTLERİ**<br>
+Veriler, sayısal ve alfa sayısal olmak üzere iki ayrı grupta değerlendirilmektedir.
+**Sayısal :** Sayısal verileri; tam sayılar ve ondalık sayılar olmak üzere iki grupta ifade edilir. Sayısal verileri gruplarken, sayıların negatif ve pozitif olma özellikleri de düşünülerek gruplandırılmıştır.
+
+**Tam sayı özelliği:** İçinde nokta içermeyen 0(sıfır)sayısı dahil, 9(dokuz) sayısı dahil aradaki sayılardan oluşan tüm sayılara tam sayı denir.
+
+**Alfa sayısal (Alfabetik):** A – Z karakterleri dahil aradaki tüm karakterler ve 0 – 9 sayıların tamamı alfa sayısal (alfabetik) olarak kabul edilir.
+
+### VERİLERİ TANIMLAMA
+Veri (bilgi), bilgisayar ortamında üzerinde işlem yürütülen ifadeler olarak bilinir. Veri üzerinde, herhangi bir işlemi yürütebilmek için ,veri girişi, dış ortamdan gerçekleştirildiğinde, bilgisayarda rasgele erişimli bellek (RAM) denilen ortamda tutulmaktadır. 
+
+Klavyeden bir veri girildiğinde, doğrudan doğruya bellekte belirlenen bir alanda tutulacaktır. Bu nedenle, veri girişi gerçekleşmeden önce veri için, beleğin belli bir yerinin o veriye ayrılması için, ilgili yer, kullanıcı tarafından isimlendirilmelidir. Bir başka deyişle; belleğin hangi yerinde veri tutulursa tutulsun, ilgili yerin, verinin türüne ve özelliğine bağlı olarak, kullanıcı tarafından verilecek bir isimle bellekte bir yer belirlenip ,ayrılacaktır. Bu yer belirleme işleminden sonra veri girişi kullanıcı tarafından gerçekleşecektir. Kısaca, belleğe bir veri girişinin yapılabilmesi için, mutlaka verilecek bir isimle, bellekteki verinin yeri belirlenmelidir. Bilgisayar ortamında veriler üzerinde işlem yapılabilmesi için bellekte bir yer ayrılması ve ayrılan bu yerin de isimlendirilmesi gerektiğini ifade ettik. İsimlendirme yapılırken, algoritma veya bir program dili içinde verinin nasıl değerlendirileceğine bağlı olarak gerçekleştirilir. Bu nedenle, genel anlamda verileri iki grupta değerlendiriyoruz. Bunlar;
+1. Sabitler
+    Bir programın çalışması sırasında, program başlangıcından, program sona erinceye kadar değeri değişmeyen ifadelere sabit denir. Algoritmada sabitleri sayısal ve alfa sayısal olarak ikiye ayırıyoruz.
+    - **Sayısal Sabitler:**
+        0 – 9 dahil arasındaki sayılardan oluşan sayıların tamamı sayısal sabit olarak kabul edilir. Sayısal sabitler iki grupta değerlendirilir. 
+        - **Tam Sayı Sabitleri :** İçinde nokta içermeyen , pozitif ve negatif sayıların tamamına denilir. tam sayı sabitleri `Örnek: 127 , -128 , -32768 , +32767 , 0 , 12345` gibi sayılar.
+        - **Ondalık ( Gerçel ) Sayı sabitleri:** İçinde nokta bulunan, pozitif ve negatif sayıların tamamına ondalık yada gerçel sayı sabitleri denilir. Bu sayıları da kendi içinde iki gruba ayrılmaktadırlar.
+            - **Sabit Noktalı Ondalık ( Gerçel ) Sabit Sayılar:** Sayı içindeki noktanın yeri değişmiyorsa, sabit noktalı gerçel (ondalık) sayılar denir. `Örnek : 1.5 , - 89.67 , +0.05 , +127.87` gibi sayıları verebiliriz.
+            - **Kayan Noktalı Ondalık ( Gerçel ) Sabit Sayılar :** Eğer sayı içindeki noktanın yeri değişiyorsa bu tip sayılara kayan noktalı (gerçel) sabit sayılar denir.`Örnek : 1.5 E-23, 9.6E+15 , +1.7D-10` gibi sayıları verebiliriz.
+
+            Diğer taraftan, ondalık (gerçel) sabit sayılar ikiye ayrılırlar.  bunlar;Tek duyarlıklı ondalık (gerçel) sabit sayılar. Çift duyarlıklı ondalık (gerçel) sabit sayılar.
+
+            - **Tek duyarlıklı ondalık (gerçel) sabit sayılar:** Gerçel sayının, noktadan sonra en fazla 7 basamak yürütülebilen sayı tiplerine denir. 
+            - **Çift duyarlıklı ondalık (gerçel) sabit sayılar:** Gerçel sayının, noktadan başlayarak 7 haneden fazla ve 17 haneye kadar gösterilen sayılara denir. Kayan noktalı sabitlerde E karakteri sayının tek duyarlıklı (Single precision) olduğunu, kayan noktalı sabitlerde D karakteri sayının çift duyarlıklı (Double precision) olduğunu  göstermektedir.
+            - **Alfasayısal (Alfabetik) sabitler:** 0 – 9 sayıları ve aradaki sayılar. A–Z, a-z arasıdaki karakterler ve tüm özel karakterler alfa sayısal ( Alfabetik ) sabitler olarak isimlendirilirler. Alfabetik sabitler gösterilirken (‘ ‘ ) tek tırnak aralığında gösterilirler. Ancak, boşlukta bir karakter olarak kabul edilir ve ‘’ olarak gösterilir.
+2. Değişkenler
+Bir programın çalışması sırasında, program başlangıcından, program sona erinceye kadar değeri değişebilen ifadelere değişken denir. Bir Pascal programlama dilinde değişkenleri tanımlarken bilinmesi gereken kurallar vardır. Bunlar
+aşağıda açıklandığı gibidir.
+
+- İsimlendirme Kuralları
+    - Değişkenlere verilecek isim mutlaka bir harf ile başlamalıdır. Harf karakterinden sonra sayısal değerler verilebilir.Sayı karakterleri ve özel karakterler ile başlayan isimler geçerli isim kabul edilmez.
+    `Örnek: ?ad, !SAY , 2ISIM` gibi tanımlar geçersizdir.
+    - Değişken ismine ait karakterler arasında boşluk karakteri olamaz. Pascal dilinde boşluk yerine alt çizgi ( _ ) karakteri kullanılabilir.
+    - Değişken isminde türkçe karakter kullanılamaz.
+    -Değişkenlere verilen isim karakterleri arasında `, * , ! , ? , & , ; , ( , ),` gibi özel işaretler kullanılamaz.
+    - Programlama diline ait komutlar değişken ismi olarak kullanılamaz.
+    -Değişkenler iki grupta değerlendirilir. Bunlar, sayısal ve alfa sayısal değişkenler olarak ifade edilirler.
+    - Sayısal değişkenler: 1,2,3,4,5,6,7,8,9 ve 0 sayıları dahil bu sayıları temsil eden ifadelere denir.
+    - Sayısal değişkenleri, tam sayı ve gerçel sayılar olarak iki grupta değerlendiriyoruz.
+    - Alfa sayısal (Alfabetik) değişkenler: Özel karakterler dahil tüm karakterler ve karakter dizileri temsil eden ifadelere denir.
+
 ## Problem Çözme ve Algoritma
 Problem Çözme Tekniği (Descartes’e göre):
 1. Doğruluğu kesin olarak kanıtlanmadıkça, hiçbir şeyi doğru olarak kabuletmeyin; tahmin ve önyargılardan kaçının.
