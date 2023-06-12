@@ -397,6 +397,61 @@ ASCII temel olarak 7 bit’ tir. 127 karakterden oluşur. Ama Extended kısmıyl
 <hr>
 
 # 2.Algoritma
+## Temel özellikleri
+Algoritmalarda, doğru çözüme ulaşabilmek için, uyulması gereken temel özellikler vardır. Bu temel
+özellikler sırasıyla ;
+1. **Kesinlik**
+    - Algoritmadaki anlatım satırları kesin olmalıdır. Kesin olmayan anlatım satırları algoritmada bulunmamalıdır. Bir algoritmayı yazarken, her programcının programlama bilgisinin aynı olmadığını göz önüne alıp, algoritmadaki cümlelerimizi, kesin ifadelerle belirtmeliyiz. Özetle kesinlik, algoritmanın en önemli temel özelliğidir.
+2. **Etkinlik**
+    - Bir algoritma etkin olmalıdır. Bir algoritmanın etkin olabilmesi, içinde tekrar anlatımların bulunmamasına bağlıdır. Aşağıdaki algoritmada PI ve R değerleri tanımlanmakta ve sayısal değerler atanmaktadır. Atanan değerlere göre alan hesaplanmaktadır. Tanımlar ve hesaplama işleminin bir kez yapıldığı bu algoritma ETKİN bir algoritma olmaktadır.
+    ```
+    PI = 3,14
+    R = 5
+    Alan = PI * R^2
+    ```
+    Aşağıdaki algoritmada ise, önce PI ve R tanımlanarak değer atanmaktadır. Alan hesaplanmakta ve daha sonra aynı işlemler bir kez daha yapılmaktadır. Benzer işlemlerin iki kez tekrarlanması nedeniyle etkin bir algoritma olmamaktadır.
+    ```
+    PI = 3,14
+    R = 5
+    Alan = PI * R ** 2
+    PI = 3,14
+    R = 7
+    Alan = PI * R ** 2
+    ```
+    İçinde en az tekrar anlatımları bulunduran algoritmalar, en etkin algoritmalar olarak kabul edilir. Dolayısıyla, içinde gereksiz tekrarları bulunduran yazılımlar etkin olamazlar. Bu nedenle, içinde tekrar anlatımları barındıran, bir algoritma tasarlanıyorsa, tekrar anlatımların tamamı için önerilen yol, en az sayıda alt algoritma diye isimlendirdiğimiz anlatımlara yer verilmelidir. Bir başka deyişle; birbirinden farklı fakat aynı türdeki tekrar işlemlerinde, bir tek alt algoritma ile çözüm gerçekleşebilir.
+
+    **Örnek:**<br>
+    Bir sınıfa ait öğrencilerin, sorumlu oldukları derslere ait, girdikleri sınavlardan alacakları puanların     ortalamalarını bulan bir yazılımı, bir alt algoritma aracılığı ile gerçekleştirilebilir. Dolayısiyle, her bir öğrenci için ayrı ayrı değil de, bir tek alt algoritma düzenleyip, sonuçlandırmak mümkün olabilir. Benzer olarak; bir işletmenin pazarlama elemanlarının, günlük satış ortalamalarının hesaplanması istenebilir. Dikkat edilirse, yukarıdaki iki örnek, aynı türden olması nedeniyle, aynı yazılım içerisinde, görünüşte ayrı konular olmasına karşın, yukarıda sözü edilen iki ayrı konunun çözümü, tek bir alt algoritma yazılımında gerçekleşebilir. Sonuç olarak söylenebilir ki , bir algoritmanın etkinliği, gereksiz tekrar işlemlerinden kaçınmaya bağlıdır.
+3. **Sonluluk**
+    - Her algoritmanın bir bitiş noktası veya algoritmanın alt algoritması var ise,bu alt algoritmaların geri dönüş noktası olmalıdır. Bunun anlamı; bir yazılıma ait algoritmanın bittiğini kesinlikle belirtmek gerekir. Aynı algoritma içinde, zaman zaman farklı işlemleri gerçekleştirmek üzere, farklı noktalara geçici olarak, algoritmanın akış yönünü değiştirme gereği olabilir ki, bu yukarıda alt algoritma olarak ifade edildi. Alt algoritmaya nereden gelinmiş ise , geldiğimiz yere, geri dönüş noktası kesinlikle sağlanmalıdır.
+    
+    **Not:**<br>
+    Alt algoritmalara saptığımız noktalar , Ana algoritma dediğimiz algoritma üzerinden gerçekleşmektedir. Fakat, zaman zaman alt algoritma içinden de başka bir alt algoritmaya sapılabilir.Aşağıdaki örnekte olduğu gibi.
+    ```
+    ANA PROGRAM {
+        ALT ALGORİTMA BİR   <- 1.ADIM
+        ALT ALGORİTMA İKİ   <- 4.ADIM
+        }
+    END ANA PROGRAM
+    ALT PROGRAM BİR {
+        ALT PROGRAM İKİ     <- 2.ADIM
+    RETURN
+    }
+    ALT PROGRAM İKİ {
+        ALT PROGRAM İKİ     <- 3.ADIM
+    RETURN
+    }
+    ```
+4. Giriş/Çıkış olarak ifade edilirler.
+    Algoritmanın son özelliği giriş/çıkış bilgileridir. Algoritma tasarlanırken, bilgi transferi algoritma içine doğru oluyorsa, giriş bilgisini ve bilgi transferi algoritma dışına doğru oluyorsa çıkış bilgisi olmaktadır .
+
+    Bir Algoritmada, giriş bilgisi denildiğinde, kesinlikle giriş bilgisi olacaktır diye bir istem yoktur. Bunun anlamı; giriş bilgisi kullanıcı tarafından girilebilir veya algoritma içinde yaratılabilir yada giriş bilgisi hiç olmayabilir. Ancak, algoritmada çıkış bilgisi denildiğinde, kesinlikle olmalıdır. Bilginin girişi; klavye,bar kod okuyucu, mouse gibi giriş ünitesi diye kabul edilen düzenekler aracılığı ile sağlanmaktadır. Bilginin çıkışı ise; ekran veya yazıcılar aracılığı ile sağlanmaktadır.
+
+    Giriş ve Çıkış işlemleri için örneklersek; algoritmada bir bilginin giriş işlemi için okunabilmesi; READ ifadesi kullanılarak, değişken diye isimlendirdiğimiz, veri isimleri aracılığı ile gerçekleşmektedir. Bu durum VERİLER konu başlığı altında,verileri tanımlama konusu içinde ayrıntılı bir şekilde anlatılacaktır.
+
+    
+
+    
 ## Problem Çözme ve Algoritma
 Problem Çözme Tekniği (Descartes’e göre):
 1. Doğruluğu kesin olarak kanıtlanmadıkça, hiçbir şeyi doğru olarak kabuletmeyin; tahmin ve önyargılardan kaçının.
