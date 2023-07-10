@@ -1,0 +1,2 @@
+﻿# Poblem!
+Sürekli olarak sayılar okunacak.Okunan sayı sıfırdan büyük ise,o zamana kadar okuduğu pozitif sayıların toplamını yazacak. Okuduğu sayı sıfırdan küçük ise son okuduğu artı sayıyı iptal edip,ona kadar olan artı sayıların geriye kalan toplamını yazacak.(Sayılar yazılırken negatif bir sayıdan sonra negatif başka bir sayı gelebilir bu sayı dikkate alınmayacak.Dizi kullanmaksızın,ilkel öbeklerle gerçekleştirilecek.
