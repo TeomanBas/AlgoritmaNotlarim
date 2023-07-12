@@ -2,7 +2,20 @@
 {
     private static void Main(string[] args)
     {
-        kaprekarkontrol(45);
+
+        Console.WriteLine(kaprekarsayibul(1, 10000)); 
+    }
+    public static string kaprekarsayibul(int baslangic,int bitis)
+    {
+        string kaprekarsayilar = "";
+        for (int i = baslangic; i <= bitis; i++)
+        {
+            if (kaprekarkontrol(i) == true)
+            {
+                kaprekarsayilar += i+", ";
+            }
+        }
+        return kaprekarsayilar;
     }
     public static bool kaprekarkontrol(int n)
     {
@@ -28,12 +41,12 @@
             // Sol ve sağ toplamı n ise Kaprekar sayısıdır
             if (sol + sag == n && sag > 0)
             {
-                Console.WriteLine("kaprekar sayı");
+
                 return true;
             }
         }
         // Hiçbir basamak için Kaprekar sayısı olmadıysa false döndür
-        Console.WriteLine("kaprekar sayı değil");
+
         return false;
     }
 }
