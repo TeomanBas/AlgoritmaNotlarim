@@ -5,7 +5,9 @@ VisualStudioVersion = 17.6.33801.468
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "1-Problem", "1-Problem\1-Problem.csproj", "{1839CA17-6B85-4C1F-A274-8D835B8184B1}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "2-MukemmelSayilar", "2-MukemmelSayilar\2-MukemmelSayilar.csproj", "{340BE18C-9920-433B-AE83-84397D458822}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "2-MukemmelSayilar", "2-MukemmelSayilar\2-MukemmelSayilar.csproj", "{340BE18C-9920-433B-AE83-84397D458822}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "3-KaprekarSayilar", "3-KaprekarSayilar\3-KaprekarSayilar.csproj", "{7633A90F-138B-463A-91C5-79D2C29236BC}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -21,6 +23,10 @@ Global
 		{340BE18C-9920-433B-AE83-84397D458822}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{340BE18C-9920-433B-AE83-84397D458822}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{340BE18C-9920-433B-AE83-84397D458822}.Release|Any CPU.Build.0 = Release|Any CPU
+		{7633A90F-138B-463A-91C5-79D2C29236BC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7633A90F-138B-463A-91C5-79D2C29236BC}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7633A90F-138B-463A-91C5-79D2C29236BC}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7633A90F-138B-463A-91C5-79D2C29236BC}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
