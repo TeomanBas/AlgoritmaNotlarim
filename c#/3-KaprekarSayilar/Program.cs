@@ -2,21 +2,9 @@
 {
     private static void Main(string[] args)
     {
-        //yazdir(Usal(9, 2));
-        kaprekarkontrol(9);
 
-    }
-    public static double[] Usal(int Sayi, int us)
-    {
-        double[] sayiussu = new double[1] { Math.Pow(Sayi, us) };
-        return sayiussu;
-    }
-    public static void yazdir(double[] sayidizi)
-    {
-        for (int i = 0; i < sayidizi.Length; i++)
-        {
-            Console.WriteLine(sayidizi[i]);
-        }
+        kaprekarkontrol(45);
+
     }
     public static bool kaprekarkontrol(int n)
     {
